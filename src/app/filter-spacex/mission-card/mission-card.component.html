@@ -5,7 +5,7 @@
     <div class="m-3">
         <p style="color: #3535d6;" class="mb-3">FalconSat #1</p>
         <p class="m-0">Mission Ids</p>
-        <li class="pl-2 mb-1 mt-0" let  of mission.mission_id>
+        <li class="pl-2 mb-1 mt-0" *ngFor = "let id of mission.mission_id">
         <span>{{id}}</span> 
         </li>
         <p class="mb-2">Launch Year : <span>{{mission.launch_year}}</span> </p>
