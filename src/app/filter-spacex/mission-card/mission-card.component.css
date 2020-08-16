@@ -1,0 +1,26 @@
+.img-background {
+    background-color: #F1F1F1;
+}
+
+.card {
+    background-color: white;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
+p {
+    font-weight: bold;
+}
+
+span {
+    color: #928383;
+    font-weight: normal;
+}
+
+@media(max-width:700px)  {
+    .card {
+
+        margin-top: 2% !important;  
+    }
+}
+

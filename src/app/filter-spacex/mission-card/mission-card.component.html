@@ -1,0 +1,15 @@
+<div class="card" style="background-color: white;">
+    <div class="text-center">
+        <img src={{mission.links.mission_patch_small}} class="img-background mt-3" width="75%">
+    </div>
+    <div class="m-3">
+        <p style="color: #3535d6;" class="mb-3">FalconSat #1</p>
+        <p class="m-0">Mission Ids</p>
+        <li class="pl-2 mb-1 mt-0" let  of mission.mission_id>
+        <span>{{id}}</span> 
+        </li>
+        <p class="mb-2">Launch Year : <span>{{mission.launch_year}}</span> </p>
+        <p class="mb-2">successful Launch: <span>{{mission.launch_success}}</span></p>
+        <p class="pb-4">successful <br> Landing: <span> {{mission.rocket.first_stage.cores[0].land_success}} </span> </p>
+    </div>
+</div>
