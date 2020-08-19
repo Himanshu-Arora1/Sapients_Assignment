@@ -11,7 +11,7 @@ export class FilterSpacexComponent implements OnInit,OnDestroy {
 
   years:Array<string> = ["2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020"]
   missions: any;
-  filterSelected: any = {'year': '', 'launch_success': 'true', 'land_success':'true'};
+  filterSelected: any = {'year': '', 'launch_success': '', 'land_success':''};
   subscription: Subscription;
   eleId: any;
 
@@ -56,9 +56,17 @@ export class FilterSpacexComponent implements OnInit,OnDestroy {
       this.buttonClicked(event);
       this.filterSelected.year = event.target.value;
     }
-    this.spacexData.getMissions(this.filterSelected).subscribe(data => {
-      this.missions = data;
-    });
+    if(this.filterSelected.land_success || this.filterSelected.launch_success) {
+      debugger
+      this.spacexData.getMissions(this.filterSelected).subscribe(data => {
+        this.missions = data;
+      });
+    } else {
+      debugger
+      this.spacexData.getMissionsByYear(this.filterSelected).subscribe(data => {
+        this.missions = data;
+      });
+    }
   }
 
   buttonClicked(event: any) {

@@ -35,4 +35,11 @@ export class SpacexDataService {
     return this.http.get("https://api.spaceXdata.com/v3/launches", { params: params });
   }
 
+  getMissionsByYear(filters: any) {
+    let params = new HttpParams();
+    params = params.append('limit', '100');
+    params = params.append('launch_year', filters.year);
+    return this.http.get("https://api.spaceXdata.com/v3/launches", { params: params });
+  }
+
 }
