@@ -1,0 +1,26 @@
+    <h5 class="font-weight-bold mb-0 ml-4">Filters</h5>
+    <p class="text-center mb-0">Launch Year</p>   
+    <div class="row no-gutters mb-3">
+        <div *ngFor="let year of years" class="col-6 text-center">
+                <button type="button" id={{year}} value={{year}} class="mt-2 mb-2" 
+                (click)="getMissions($event)" >{{year}}</button>   
+        </div>    
+    </div> 
+    <p class="text-center mb-0">Sucessful Launch</p>
+    <div class="row no-gutters mb-3">
+        <div class="col-6 text-center">
+            <button type="button" class="ml-2 mt-2 mb-2 pl-2 pr-2" id="launch_button_1" value="true" (click)="launchStatus($event)">True</button>
+        </div>   
+        <div class="col-6 text-center">
+            <button type="button" class="ml-2 mt-2 mb-2 pl-2 pr-2" id="launch_button_2" value="false" (click)="launchStatus($event)">False</button>
+        </div>  
+    </div>
+    <p class="text-center mb-0">successful Landing</p>
+    <div class="row no-gutters pb-5">
+        <div class="col-6 text-center">
+            <button type="button" class="ml-2 mt-2 mb-2 pl-2 pr-2" id="landng_button_1" value="true" (click)="landingStatus($event)">True</button>
+        </div>   
+        <div class="col-6 text-center">
+            <button type="button" class="ml-2 mt-2 mb-2 pl-2 pr-2" id="landing_button_1" value="false" (click)="landingStatus($event)">False</button>
+        </div>  
+    </div>

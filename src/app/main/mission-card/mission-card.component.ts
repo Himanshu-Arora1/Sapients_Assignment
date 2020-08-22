@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { SpacexDataService } from '../filter-spacex/spacex-data.service';
 
 @Component({
   selector: 'app-mission-card',
@@ -9,9 +10,10 @@ export class MissionCardComponent implements OnInit {
 
   @Input() mission: any;
 
-  constructor() { }
+  constructor(private spacexService: SpacexDataService) { }
 
   ngOnInit() {
   }
+
 
 }
